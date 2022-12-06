@@ -11,6 +11,7 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
 
 </head>
+
 <body>
     <nav id="header">
     </nav>
@@ -21,7 +22,7 @@
             <h1>¡AHORA!</h1>
             <p>¿Problemas con tu deuda? Nosotros te ayudamos. </p>
             <div class="links">
-                <a href="https://www.laavanzada.cl" class="txt">Leer más</a>
+                <a target="_blank" href="https://www.laavanzada.cl" class="txt">Leer más</a>
                 <a href="#sec2" class="btn">Contacto</a>
             </div>
         </div>
@@ -29,46 +30,57 @@
     <section id="sec2">
         <div class="contenedor-texto2">
             <h2>Contacto</h2>
-            <p>Escríbenos directamente por Whatsapp haciendo click a los enlaces que se encuentran a continuación o enviando el formulario de contacto.</p>
+            <p>Escríbenos directamente por Whatsapp haciendo click a los enlaces que se encuentran a continuación o
+                enviando el formulario de contacto.</p>
             <div class="body-wsp">
-                <a href=""><i class="fi fi-brands-whatsapp"></i></a>
-                <a href=""><i class="fi fi-brands-whatsapp"></i></a>
-                <a href=""><i class="fi fi-brands-whatsapp"></i></a>
+                <a  target="_blank" href="https://api.whatsapp.com/send?phone=+56951925230&text=Gracias por comunicarte con Gestora La Avanzada."
+                    data-tooltip="Tool tip"><i class="fi fi-brands-whatsapp"></i></a>
+                <a target="_blank"
+                    href="https://api.whatsapp.com/send?phone=+56940609792&text=Gracias por comunicarte con Gestora La Avanzada."><i
+                        class="fi fi-brands-whatsapp"></i></a>
+                <a target="_blank"
+                    href="https://api.whatsapp.com/send?phone=+56994879204&text=Gracias por comunicarte con Gestora La Avanzada."><i
+                        class="fi fi-brands-whatsapp"></i></a>
             </div>
             <div class="body-section3">
                 <div class="container">
-                    <form action="#">
+                    <form action="#" id="formSS114">
                         <div class="form-content">
                             <div class="login-form">
                                 <div class="title">Formulario de contacto</div>
                                 <div class="input-boxes">
                                     <div class="input-box">
                                         <i class="fi fi-rr-user"></i>
-                                        <input class="placeholder" type="number"
-                                            placeholder="Ingrese su RUT. Sin puntos ni guión"  max="999999999" min="11111111" required>
+                                        <input class="placeholder" type="number" name="rut"
+                                            placeholder="Ingrese su RUT. Sin puntos ni guión" max="999999999"
+                                            min="11111111" required>
                                     </div>
                                     <div class="input-box">
                                         <i class="fi fi-rr-user"></i>
-                                        <input class="placeholder" type="text" placeholder="Ingrese su nombre completo"
-                                            required>
+                                        <input class="placeholder" type="text" name="nombre" placeholder="Ingrese su nombre completo"
+                                            required style="text-transform:uppercase;"
+                                            onkeyup="javascript:this.value=this.value.toUpperCase();">
                                     </div>
                                     <div class="input-box">
                                         <i class="fi fi-rr-smartphone"></i>
-                                        <input class="placeholder" type="number" placeholder="Ingrese su teléfono" required>
+                                        <input class="placeholder" type="number" name="numero" placeholder="Ingrese su teléfono"
+                                            required>
                                     </div>
                                     <div class="input-box">
                                         <i class="fi fi-rr-envelope"></i>
-                                        <input class="placeholder" type="email" placeholder="Ingrese su correo electrónico"
-                                            required>
+                                        <input class="placeholder" type="email" name="email"
+                                            placeholder="Ingrese su correo electrónico" required
+                                            style="text-transform:uppercase;"
+                                            onkeyup="javascript:this.value=this.value.toUpperCase();">
                                     </div>
                                     <div class="button input-box">
                                         <i class="fi fi-sr-envelope"></i>
-                                        <input type="submit" value="Enviar">
+                                        <input type="submit" id="button" value="Enviar">
                                     </div>
                                 </div>
                             </div>
                             <div class="img-logo">
-        
+
                             </div>
                         </div>
                     </form>
@@ -78,8 +90,53 @@
 
     </section>
     <div id="footer">
-        <div class="left"><span>Oficina de atención al público:</span> Huérfanos 779, oficina 1101, Santiago <br> <span>Horario oficina:</span> Lunes a Viernes de 9:00 a 18:00 horas.</div>
+        <div class="left"><span>Oficina de atención al público:</span> Huérfanos 779, oficina 1101, Santiago <br>
+            <span>Horario oficina:</span> Lunes a Viernes de 9:00 a 18:00 horas.
+        </div>
         <div class="right"><span>Escríbenos:</span> info@laavanzada.cl <br> <span>Llámanos:</span> 8000004088</div>
-        
+
     </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('QZ4YXyUUN-BwA3o3D')
+    </script>
+    <script type="text/javascript">
+
+        const btn = document.getElementById('button');
+        document.getElementById('formSS114').addEventListener('submit', function (event) {
+            event.preventDefault();
+            btn.value = 'Enviando...';
+            const serviceID = 'service_xh47sbg';
+            const templateID = 'template_g0o3vtw';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.value = 'Enviar';
+                    alert('Hemos recibido exitosamente tu mensaje, nos podremos en contacto a la brevedad. ¡Gracias!');
+                }, (err) => {
+                    btn.value = 'Enviar';
+                    alert(JSON.stringify(err));
+                });
+            formSS114.reset();
+        });
+    </script>
+    <script>
+        window.addEventListener('mouseover', initLandbot, { once: true });
+        window.addEventListener('touchstart', initLandbot, { once: true });
+        var myLandbot;
+        function initLandbot() {
+          if (!myLandbot) {
+            var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+            s.addEventListener('load', function() {
+              var myLandbot = new Landbot.Livechat({
+                configUrl: 'https://storage.googleapis.com/landbot.pro/v3/H-1391754-NGBWE948N1DP50EW/index.json',
+              });
+            });
+            s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+          }
+        }
+        </script>
 </body>

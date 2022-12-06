@@ -94,6 +94,9 @@ section:nth-child(2){
 section:nth-child(3){
     background-image: linear-gradient(705deg, rgb(219,200,172),rgb(231,19,63));
 }
+section#sec2 h2{
+    text-decoration: underline #fff;
+}
 .body-wsp{
     height: 120px;
     width: 100%;
@@ -119,11 +122,7 @@ section:nth-child(3){
     color: #25D366;
     font-size: 120px;
 }
-.up{
-    margin-bottom: 0;
-    position: fixed;
-    position: absolute;
-}
+
 .container {
     max-width: 850px;
     width: 100%;
@@ -345,7 +344,7 @@ form .form-content .button input:hover {
     }
     
 }
-@media (max-width: 730px) {
+@media (max-width: 768px) {
     .container .img-logo {
         display: none;
     }
@@ -420,5 +419,23 @@ form .form-content .button input:hover {
     .container{
         width: 100%;
         height: 100%;
+    }
+    form .form-content .input-boxes{
+        margin-top: 0;
+    }
+    form .form-content .input-box{
+        margin-top: 0;
+    }
+
+}
+@media screen and (max-width:361px){
+    section#sec2{
+        padding: 20px 10px;
+    }
+    .body-section3{
+        padding: 5px;
+    }
+    .container{
+        padding: 5px;
     }
 }
