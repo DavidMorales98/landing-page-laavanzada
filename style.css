@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+:root {
+    --color1: #DD5353;
+    --color2: #B73E3E;
+    --color3: #DBC8AC;
+    --color4: #EDDBC0;
+    --color-text1: #333;
+    --color-text2: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    padding: 50px 40px;
+    
+}
+section img{
+    width: 50%;
+    height: auto;
+}
+section h1{
+    font-size: 150px;
+    font-weight: 800;
+    margin-bottom: 5px; 
+    color: #fff;
+    text-decoration: underline ;
+}
+section h2{
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    padding-bottom: 0;
+    color: #fff;
+    margin-left: 40px;
+}
+
+section p{
+    font-weight: 300;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 24px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+section .links{
+    width: auto;
+    display: inline-block;
+    align-items: center;
+    height: 80px;
+    padding: 10px;
+}
+section .links a{
+    font-size: 25px;
+    padding: 10px;
+    margin: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+}
+section .links a.btn{
+    background-color: #fff;
+    color: var(--color-text1);
+    border-radius: 25px;
+    padding: 10px 20px;
+    border: 1px solid var(--color2);
+    box-shadow: 10px #333;
+    transition: 0.5s;
+}
+section .links a.btn:hover{
+    background-color: hsla(37, 39%, 77%, 0.565);
+    color: #fff;
+}
+section .links a.txt:hover{
+    text-decoration: underline #fff;
+}
+section:nth-child(2){
+    background-image: url(./bg-home1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+section:nth-child(3){
+    background-image: linear-gradient(705deg, rgb(219,200,172),rgb(231,19,63));
+}
+.body-wsp{
+    height: 120px;
+    width: 100%;
+    text-align: center;
+}
+.body-wsp a{
+    text-decoration: none;
+    width: auto;
+    height: 100%;
+    color:#fff;
+    margin: 40px;
+    padding: 2px;
+}
+.body-wsp a i{
+    height: 100%;
+    width: auto;
+    margin: 10px;
+    font-size: 100px;
+    line-height: 0%;
+}
+
+.body-wsp i:hover{
+    color: #25D366;
+    font-size: 120px;
+}
+.up{
+    margin-bottom: 0;
+    position: fixed;
+    position: absolute;
+}
+.container {
+    max-width: 850px;
+    width: 100%;
+    background-color: var(--color-text2);
+    padding: 40px 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.container form {
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-text2);
+}
+
+.body-section3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+.container .form-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-content .login-form {
+    width: calc(100% / 2 - 25px);
+}
+
+.form-content .img-logo {
+    width: calc(100% / 2 - 25px);
+    height: 400px;
+    background-image: url(logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+form .form-content .title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: underline var(--color1);
+}
+
+form .form-content .title:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 40px;
+    background-color: var(--color1);
+}
+
+form .login-form .form-content .title:before {
+    margin-top: 30px;
+}
+
+form .form-content .input-boxes {
+    margin-top: 30px;
+}
+
+form .form-content .input-box {
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+}
+
+form .form-content .input-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0 30px;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 2px solid var(--color1);
+    transition: all 0.3s ease;
+
+}
+
+form .form-content .input-box input:focus,
+form .form-content .input-box input:valid {
+    border-color: var(--color1);
+}
+
+form .form-content .input-box i {
+    position: absolute;
+    color: var(--color1);
+    font-size: 20px;
+    top: 15px;
+}
+
+form .form-content .text a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text1);
+    text-decoration: none;
+
+}
+
+form .form-content .text a:hover {
+    text-decoration: underline;
+}
+
+form .form-content .button {
+    color: var(--color-text2);
+    margin-top: 40px;
+}
+
+form .form-content .button input {
+    color: var(--color-text2);
+    background: var(--color1);
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+form .form-content .button input:hover {
+    background: var(--color4);
+    color: var(--color-text1)
+}
+
+.btn-float {
+    background-color: var(--color-text2);
+    border: 1px solid var(--color2);
+    position: fixed;
+    z-index: 999;
+    border-radius: 50%;
+    bottom: 20px;
+    right: 25px;
+    padding: 25px;
+    transition: ease 0.3s;
+}
+
+.btn-float:hover {
+    transform: scale(1.5);
+    transition: 0.3s;
+}
+
+/*FOOTER PAGE*/
+#footer {
+    position:fixed;
+    padding: 20px;
+    bottom:0px;
+    height:auto;
+    width:100%;
+    background:var(--color3);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+#footer span{
+    text-decoration: underline #333;
+}
+
+@media screen and (max-width:1771px) {
+    section .contenedor-texto img{
+        width: 45%;
+    }
+    section .contenedor-texto h1{
+        font-size: 100px;
+    }
+    section .contenedor-texto h2{
+        font-size: 40px;
+    }
+    section .contenedor-texto p{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:1503px) {
+    section#sec1{
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+    }
+    section .contenedor-texto{
+        text-align: center;
+    }
+    section .contenedor-texto{
+        background: inherit;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        margin: 0 auto;
+        box-sizing: border-box;
+        box-shadow: 0 .5em 1em rgba(0,0,0,.3);
+      }
+    section .contenedor-texto::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0; right: 0; bottom: 0; left: 0;
+        background:#dd53536d ;
+        box-shadow: inset 0 0 3000px rgba(255,255,255,.5);
+        filter: blur(10px);
+        margin: -20px;
+      }
+    section .contenedor-texto h1{
+        font-size: 100px;
+        text-align: center;
+    }
+    section .contenedor-texto h2{
+        font-size: 40px;
+    }
+    section .contenedor-texto p{
+        text-align: center;
+        width: 100%;
+    }
+    section .links a.btn{
+        background-color: #fff;
+    }
+    
+}
+@media (max-width: 730px) {
+    .container .img-logo {
+        display: none;
+    }
+    form .form-content .input-box input{
+        font-size: 12px;
+    }
+    .form-content .login-form {
+        width: 100%;
+    }
+    section#sec2 h2{
+        margin-left: 0px;
+    }
+    section#sec2 p{
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+
+    form .form-content .input-box input .placeholder {
+        font-size: 10px;
+    }
+    .body-wsp{
+        height: 80px;
+    }
+    .body-wsp a{
+        display: inline-flex;
+        margin: 10px;
+    }
+    .body-wsp a i{
+        font-size: 55px;
+    }
+    .body-wsp i:hover{
+        font-size: 80px;
+    }
+}
+@media screen and (max-width:525px){
+    section .contenedor-texto h1{
+        font-size: 80px;
+        text-align: center;
+    }
+    section .contenedor-texto h2{
+        font-size: 30px;
+        text-align: center;
+    }
+    section .contenedor-texto p{
+        text-align: center;
+        width: 100%;
+    }
+    section .contenedor-texto2 p{
+        text-align: justify;
+        width: 100%;
+    }
+    section .contenedor-texto .links a{
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    form .form-content .input-box input{
+        font-size: 10px;
+    }
+    .body-wsp a{
+        display: inline-flex;
+        margin: 10px;
+    }
+    .body-wsp a i{
+        font-size: 45px;
+    }
+    #footer{
+        flex-direction: column;
+        display: block;
+        font-size: 10px;
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+    }
+}
